@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  mockhub:
+    build: .
+    ports:
+      - "27000:27000" # control
+      - "27001:27001" # github
+      - "27002:27002" # shortcut
+      - "27003:27003" # zoho
+      - "27004:27004" # google
+
+    volumes:
+      - ./payloads:/app/payloads:rw
+    environment:
+      - MOCKHUB_CONTROL_PORT=27000
+      - MOCKHUB_PAYLOADS_ROOT=/app/payloads
+      - MOCKHUB_LOG_LEVEL=info

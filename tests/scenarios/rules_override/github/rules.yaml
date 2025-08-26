@@ -1,0 +1,11 @@
+
+rules:
+  - when:
+      method: GET
+      path: /repos/{owner}/{repo}/issues
+    respond:
+      file: GET/repos/{owner}/{repo}/issues.001.json
+      status: 201
+      headers:
+        X-MockHub-Rule: "applied"
+        X-Test-Header: "custom-value"

@@ -1,0 +1,6 @@
+{
+  "id": "{{ uuid4() }}",
+  "name": "{{ req.body.name }}",
+  "created_at": "{{ now() }}",
+  "note": "This repo was created dynamically. Last repo: {{ state.last_repo }}"
+}

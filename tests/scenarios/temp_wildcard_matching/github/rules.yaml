@@ -1,0 +1,12 @@
+
+rules:
+  - when:
+      method: GET
+      path: /repos/{owner}/{repo}/issues
+    respond:
+      file: GET/repos/__owner__/__repo__/issues.json.j2
+  - when:
+      method: GET
+      path: /users/{username}/repos
+    respond:
+      file: GET/users/__username__/repos.json.j2

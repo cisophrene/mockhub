@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mockhub"
+version = "0.1.0"
+description = "Local HTTP mock server for 3rd-party APIs (scenarios, rules, hooks, sequences, templating)."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name="MockHub Devs"}]
+dependencies = [
+  "fastapi>=0.111.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic>=2.7.0",
+  "PyYAML>=6.0.1",
+  "Jinja2>=3.1.4",
+  "python-dotenv>=1.0.1"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7.0",
+  "httpx>=0.20"
+]
+doc = [
+  "mkdocs>=1.4.0",
+  "mkdocs-material>=8.0.0"
+]
+
+[project.scripts]
+mockhub = "mockhub.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]

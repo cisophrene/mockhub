@@ -1,0 +1,15 @@
+
+rules:
+  - when:
+      method: POST
+      path: /search/issues
+      query:
+        sort: created
+        order: desc
+      body:
+        json:
+          q: "is:open"
+    respond:
+      file: POST/search_result.json
+      headers:
+        X-MockHub-Match: "complete"

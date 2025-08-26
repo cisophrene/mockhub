@@ -1,0 +1,7 @@
+
+rules:
+  - when:
+      method: GET
+      path: /repos/{owner}/{repo}/issues
+    respond:
+      file: GET/repos/{owner}/{repo}/issues.001.json
