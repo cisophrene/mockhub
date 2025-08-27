@@ -1,0 +1,41 @@
+site_name: MockHub – User's Manual
+site_description: 'A pleasant, precise guide to mocking third‑party APIs for integration tests.'
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: blue
+  features:
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+
+nav:
+  - 'Home': 'index.md'
+  - 'Quick Start': 'quick-start.md'
+  - 'Core Concepts': 'concepts.md'
+  - 'Control API': 'control-api.md'
+  - 'Request Matching':
+    - 'Overview': 'matching/index.md'
+    - 'File & Path Routing': 'matching/files-and-paths.md'
+    - 'Query Strings': 'matching/query-strings.md'
+    - 'Body Predicates': 'matching/body-predicates.md'
+    - 'Rules': 'matching/rules.md'
+    - 'Path Wildcards': 'matching/wildcards.md'
+  - 'Dynamic Responses':
+    - 'Overview': 'features/index.md'
+    - 'Sequences': 'features/sequences.md'
+    - 'Sidecar Metadata': 'features/metadata.md'
+    - 'Jinja2 Templating': 'features/templating.md'
+    - 'Python Hooks': 'features/hooks.md'
+  - 'Guides':
+    - 'Practical Recipes': 'guides/practical-recipes.md'
+    - 'HTTPS with a Proxy': 'guides/https-proxy.md'
+  - 'Troubleshooting': 'troubleshooting.md'
+  - 'Reference':
+    - 'Cheatsheet': 'reference/cheatsheet.md'
+    - 'Configuration & CLI': 'reference/configuration.md'
+    - 'Defaults & Conventions': 'reference/defaults.md'
+    - 'Content Types': 'reference/content-types.md'
+  - 'Example Scenario': 'example.md'
